@@ -1,47 +1,39 @@
 #include <iostream>
 using namespace std;
 int main() {
-
-  cout << "Enter a number : ";
   int n;
+  cout << "Enter a number : ";
   cin >> n;
 
-  int row = 1, dum2 = n;
+  int row = 1;
   while (row <= n) {
-    int dum = n - row + 1;
+
     int col = 1, num = 1;
-    // loop 1.
+    // loop 1
     while (col <= n - row + 1) {
       cout << num;
-      col++;
       num++;
-    }
-
-    col = 1, num = 1;
-    // loop 2.
-    while (col <= row - 1) {
-      cout << "*";
       col++;
     }
 
     col = 1;
-    // loop 3.
-    while (col <= row - 1) {
+    // loop 2 (optimized)
+    while (col <= 2 * row - 2) {
       cout << "*";
       col++;
     }
     col = 1;
-    // loop 4.
+    int ank = n - row + 1;
+    // loop 3
 
-    while (col <= dum2) {
-      cout << dum;
-      num--;
+    while (col <= n - row + 1) {
+
+      cout << ank;
       col++;
-      dum--;
+      ank--;
     }
+
     cout << endl;
-    dum2--;
-
     row++;
   }
 
