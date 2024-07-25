@@ -1,9 +1,10 @@
+
 #include <iostream>
 using namespace std;
 int main() {
   cout<<"Enter a number : ";
   int n;
-  cin>>n;
+  cin>>n; //works best for n=40.
   //1
   for(int row=1;row<(n/4);row++)
     {
